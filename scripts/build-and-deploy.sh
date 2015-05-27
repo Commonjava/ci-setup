@@ -28,3 +28,4 @@ set -x
 chcon -Rt svirt_sandbox_file_t $JENKINS_HOME
 docker run -d --name jenkins -p 8080:8080 -v $JENKINS_HOME:/var/jenkins_home ci-jenkins
 
+docker logs -f jenkins
