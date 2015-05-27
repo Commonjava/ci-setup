@@ -16,7 +16,7 @@ if [ $RET == 0 ]; then
 fi
 
 docker pull jenkins
-docker build --tags ci-jenkins $IMAGE_DIR/Dockerfile
+docker build --tag=ci-jenkins $IMAGE_DIR/Dockerfile
 RET=$?
 
 if [ $RET != 0 ]; then
