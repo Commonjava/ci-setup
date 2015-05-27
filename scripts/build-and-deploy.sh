@@ -24,5 +24,7 @@ if [ $RET != 0 ]; then
     exit 1
 fi
 
+set -x
+chcon -Rt svirt_sandbox_file_t $JENKINS_HOME
 docker run -d --name jenkins -p 8080:8080 -v $JENKINS_HOME:/var/jenkins_home ci-jenkins
 
