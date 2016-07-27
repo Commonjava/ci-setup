@@ -3,6 +3,7 @@
 * Used `docker network create -d bridge ci-network` to create a custom network within which CI services could interact freely
   * Without this, jenkins could create docker containers but never access them...
 * Added [Indy](https://commonjava.github.io/indy/user) and Jenkins to ci-network
+  * Using `docker run --net=ci-network [...]` 
   * Updated Jenkins `settings.xml` to point to host 'indy' on the container-native port of 8080 (port is not mapped via docker)
 * Added server for `registry.hub.docker.io` and matching `serverId` to docker-maven-plugin configuration
   * Server password was encrypted
