@@ -29,7 +29,6 @@ fi
 docker run -d \
            --name jenkins \
            --net=ci-network \
-           --privileged \
            -p 8080:8080 \
            -v /etc/localtime:/etc/localtime:ro \
            -v $JENKINS_HOME:/var/jenkins_home \
