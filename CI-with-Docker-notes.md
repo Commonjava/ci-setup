@@ -16,3 +16,5 @@
   * This was for the builds requiring large encryption keys
 * [PR #117](https://github.com/wouterd/docker-maven-plugin/pull/117) on net.wouterdanes.docker-docker-maven-plugin
 * Adjusted project pom.xml configurations for docker-maven-plugin, as in: [https://github.com/Commonjava/jhttpc/blob/ae684d84199fbf0f92071b3e174a2d9145873e7a/pom.xml](https://github.com/Commonjava/jhttpc/blob/ae684d84199fbf0f92071b3e174a2d9145873e7a/pom.xml)
+* Set timezone of Jenkins container appropriately using `/etc/timezone` and mapped volume: `-v /etc/localtime:/etc/localtime:ro`
+
