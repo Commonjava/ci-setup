@@ -26,6 +26,13 @@ if [ $RET == 0 ]; then
     docker rm jenkins
 fi
 
+docker network ls | grep ci-network >/dev/null
+NRET=$?
+if [ $NRET != 0]; then
+    echo "Defining bridged custom network 'ci-network'"
+    docker network create -d bridge ci-network
+fi
+
 docker run -d \
            --name jenkins \
            --net=ci-network \
