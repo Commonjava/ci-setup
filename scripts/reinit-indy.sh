@@ -16,19 +16,19 @@ systemctl status $INDY_SERVICE && systemctl stop $INDY_SERVICE
 docker ps -a | grep $INDY_CONTAINER
 RET=$?
 if [ $RET == 0 ]; then
-    echo "Removing pre-exising jenkins container."
+    echo "Removing pre-exising indy container."
     docker stop $INDY_CONTAINER
     docker rm $INDY_CONTAINER
 fi
 
 #GIT_URL=$(git remote show origin | grep Fetch | awk '{print $3}' | sed -e 's|git@github.com:|https://github.com/|g')
-GIT_URL=https://github.com/Commonjava/ci-setup,git
+GIT_URL=https://github.com/Commonjava/ci-setup.git
 docker run -d \
            --name $INDY_CONTAINER \
            --net=ci-network \
            -e INDY_ETC_URL=$GIT_URL \
            -e INDY_ETC_SUBPATH=indy/etc \
-           -p 8180:8180 \
+           -p 8180:8080 \
            $INDY_IMAGE
 
 
