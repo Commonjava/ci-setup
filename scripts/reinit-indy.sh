@@ -21,17 +21,18 @@ if [ $RET == 0 ]; then
     docker rm $INDY_CONTAINER
 fi
 
-GIT_URL=$(git remote show origin | grep Fetch | awk '{print $3}' | sed -e 's|git@github.com:|https://github.com/|g')
+#GIT_URL=$(git remote show origin | grep Fetch | awk '{print $3}' | sed -e 's|git@github.com:|https://github.com/|g')
+GIT_URL=https://github.com/Commonjava/ci-setup,git
 docker run -d \
            --name $INDY_CONTAINER \
            --net=ci-network \
-           -e INDY_ETC_URL=$GIT_UTL \
+           -e INDY_ETC_URL=$GIT_URL \
            -e INDY_ETC_SUBPATH=indy/etc \
            -p 8180:8180 \
            $INDY_IMAGE
 
 
-if [ $SHOW_LOGS == "true" ]; then
+if [ "$SHOW_LOGS" == "true" ]; then
     docker logs -f $INDY_CONTAINER
 fi
 
