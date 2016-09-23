@@ -1,8 +1,0 @@
-github:1.19.1
-ssh-agent:1.11
-git:2.4.4
-github-api:1.75
-scm-api:1.2
-git-client:1.19.6
-ghprb:1.32.5
-github-oauth:0.24

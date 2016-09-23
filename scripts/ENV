@@ -1,0 +1,8 @@
+JENKINS_IMAGE=docker.io/buildchimp/jenkins
+INDY_IMAGE=docker.io/commonjava/indy:latest
+
+JENKINS_CONTAINER=jenkins
+INDY_CONTAINER=indy
+
+JENKINS_SERVICE=jenkins
+INDY_SERVICE=indy
