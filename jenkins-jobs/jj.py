@@ -5,6 +5,7 @@ import yaml
 import glob
 import shutil
 import re
+import traceback
 
 BRANCH_NAME = 'branch'
 BUILD_COMMAND = 'build-command'
@@ -115,7 +116,7 @@ class JenkinsJobs(object):
                     self.server.create_job(name, jobxml)
                     return True
             except jenkins.JenkinsException as e:
-                print "Failed: %s" % e
+                print "Failed: (%s) %s\nTrace:\n%s" % (type(e), e, traceback.format_exc(e))
         else:
             print "In generate-only mode. NOT pushing configuration to server: %s" % name
         return False
