@@ -31,7 +31,7 @@ docker run -d \
            $INDY_IMAGE
 
 
-if [ $SHOW_LOGS == true ]; then
+if [ $SHOW_LOGS == "true" ]; then
     docker logs -f $INDY_CONTAINER
 fi
 

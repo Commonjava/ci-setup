@@ -32,7 +32,7 @@ docker run -d \
            $JENKINS_IMAGE
 
 
-if [ $SHOW_LOGS == true ]; then
+if [ $SHOW_LOGS == "true" ]; then
     docker logs -f $JENKINS_CONTAINER
 fi
 
