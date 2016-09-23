@@ -1,0 +1,14 @@
+[Unit]
+Description=Docker Cleanup (Tutum)
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+RestartSec=10
+ExecStart=/usr/bin/docker start -a docker-cleanup
+ExecStop=/usr/bin/docker stop -t 2 docker-cleanup
+
+[Install]
+WantedBy=multi-user.target
+

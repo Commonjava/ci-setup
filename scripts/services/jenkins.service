@@ -1,7 +1,7 @@
 [Unit]
 Description=Jenkins CI
-Requires=docker.service
-After=docker.service
+Requires=indy.service
+After=indy.service
 
 [Service]
 Restart=always
