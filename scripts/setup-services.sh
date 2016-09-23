@@ -5,9 +5,9 @@ SCRIPT_DIR=`dirname ${THIS}`
 
 source ${SCRIPT_DIR}/ENV
 
-${SCRIPT_DIR}/setup-network.sh
+set -x
 
-for s in $(ls -1 ${SCRIPT_DIR}/services/*.service); do
+for s in $(cd ${SCRIPT_DIR}/services && ls -1 *.service); do
 	echo "Setting up ${s}..."
 	systemctl list-units | grep $s > /dev/null
 	RET=$?
@@ -16,7 +16,10 @@ for s in $(ls -1 ${SCRIPT_DIR}/services/*.service); do
 		echo "${s} is not in systemd/system...copying it."
 		cp $SCRIPT_DIR/services/$s /etc/systemd/system
 	fi
+done
 
+systemctl daemon-reload
+for s in $(cd ${SCRIPT_DIR}/services && ls -1 *.service); do
 	echo "Enabling ${s}"
 	systemctl enable $s
 done
