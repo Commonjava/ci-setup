@@ -1,2 +1,3 @@
 github-url: https://github.com/Commonjava/partyline
 name: partyline
+jdk: OpenJDK 1.8.0
