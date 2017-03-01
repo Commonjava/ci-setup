@@ -1,5 +1,5 @@
 JENKINS_IMAGE=docker.io/buildchimp/jenkins
-INDY_IMAGE=docker.io/commonjava/indy-savant:latest
+INDY_IMAGE=docker.io/commonjava/indy-savant:1.1.3
 
 JENKINS_CONTAINER=jenkins
 INDY_CONTAINER=indy
