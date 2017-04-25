@@ -1,0 +1,19 @@
+{
+  "type" : "remote",
+  "key" : "remote:central",
+  "disabled" : false,
+  "host" : "repo1.maven.apache.org",
+  "port" : 80,
+  "doctype" : "remote",
+  "name" : "central",
+  "path_style" : "plain",
+  "allow_snapshots" : false,
+  "allow_releases" : true,
+  "url" : "http://repo1.maven.apache.org/maven2/",
+  "timeout_seconds" : 30,
+  "nfc_timeout_seconds" : 10,
+  "is_passthrough" : false,
+  "cache_timeout_seconds" : 86400,
+  "metadata_timeout_seconds" : 86400,
+  "proxy_port" : 0
+}

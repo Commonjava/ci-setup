@@ -1,0 +1,9 @@
+{
+  "type" : "group",
+  "key" : "group:public",
+  "disabled" : false,
+  "constituents" : [ "remote:central", "remote:oss-snapshots" ],
+  "doctype" : "group",
+  "name" : "public",
+  "path_style" : "plain"
+}

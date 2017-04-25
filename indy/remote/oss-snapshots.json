@@ -1,0 +1,22 @@
+{
+  "type" : "remote",
+  "key" : "remote:oss-snapshots",
+  "metadata" : {
+    "changelog" : "snaps"
+  },
+  "disabled" : false,
+  "host" : "oss.sonatype.org",
+  "port" : 443,
+  "doctype" : "remote",
+  "name" : "oss-snapshots",
+  "path_style" : "plain",
+  "allow_snapshots" : true,
+  "allow_releases" : false,
+  "url" : "https://oss.sonatype.org/content/repositories/snapshots/",
+  "timeout_seconds" : 30,
+  "nfc_timeout_seconds" : 10,
+  "is_passthrough" : true,
+  "cache_timeout_seconds" : 0,
+  "metadata_timeout_seconds" : 0,
+  "proxy_port" : 0
+}
