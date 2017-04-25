@@ -26,6 +26,7 @@ fi
 docker run -d \
            --name $JENKINS_CONTAINER \
            --net=ci-network \
+           --link indy:indy \
            -p 8080:8080 \
            -v /etc/localtime:/etc/localtime:ro \
            -v $JENKINS_HOME:/var/jenkins_home \

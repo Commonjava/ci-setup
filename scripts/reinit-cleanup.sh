@@ -25,6 +25,8 @@ docker run -d \
                             docker.io/commonjava/gogs-test-appliance, \
                             docker.io/buildchimp/git-clone-test, \
                             docker.io/commonjava/git-clone-test, \
+                            docker.io/buildchimp/keycloak-test-appliance, \
+                            docker.io/commonjava/keycloak-test-appliance, \
                             buildchimp/koji-dojo-hub, \
                             library/postgres" \
            --name=$CONTAINER \
