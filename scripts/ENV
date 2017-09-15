@@ -2,7 +2,7 @@ JENKINS_IMAGE=docker.io/buildchimp/jenkins
 JENKINS_CONTAINER=jenkins
 JENKINS_SERVICE=jenkins
 
-INDY_IMAGE=docker.io/commonjava/indy-savant
+INDY_IMAGE=docker.io/commonjava/indy-savant:1.1.9-SNAPSHOT
 INDY_CONTAINER=indy
 INDY_SERVICE=indy
 
